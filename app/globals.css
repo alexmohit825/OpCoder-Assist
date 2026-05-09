@@ -1,62 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Global styles for OpCoder Assist */
 
-@layer base {
-  body {
-    @apply bg-slate-50 text-navy-900 font-sans;
-  }
-  h1, h2, h3 {
-    @apply font-semibold;
-  }
+:root {
+  --background: #f9fafb;
+  --foreground: #111827;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --accent: #2563eb;
 }
 
-@layer components {
-  .card {
-    @apply bg-white rounded-xl shadow-card border border-slate-200 p-5;
-  }
-  .badge {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
-  }
-  .badge-teal {
-    @apply badge bg-teal-100 text-teal-600;
-  }
-  .badge-amber {
-    @apply badge bg-amber-100 text-amber-700;
-  }
-  .badge-blue {
-    @apply badge bg-blue-100 text-blue-700;
-  }
-  .badge-red {
-    @apply badge bg-red-100 text-red-700;
-  }
-  .badge-green {
-    @apply badge bg-green-100 text-green-700;
-  }
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 
-           bg-teal-600 hover:bg-teal-500 active:bg-teal-700 
-           text-white font-semibold rounded-lg 
-           transition-colors duration-150 
-           disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-  .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-4 py-2 
-           bg-white hover:bg-slate-50 active:bg-slate-100
-           text-navy-700 font-medium rounded-lg border border-slate-200
-           transition-colors duration-150
-           disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-  .input-field {
-    @apply w-full rounded-lg border border-slate-200 bg-white px-3 py-2
-           text-navy-900 text-sm placeholder-slate-400
-           focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent
-           transition duration-150;
-  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  background: var(--background);
+  color: var(--foreground);
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { @apply bg-slate-100 rounded-full; }
-::-webkit-scrollbar-thumb { @apply bg-slate-300 rounded-full; }
-::-webkit-scrollbar-thumb:hover { @apply bg-slate-400; }
+* {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
